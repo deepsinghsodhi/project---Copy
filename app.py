@@ -18,7 +18,6 @@ import uuid
 from flask_cors import CORS
 import torch
 
-
 # Initialize Flask app
 app = Flask(__name__)
 CORS(app)
