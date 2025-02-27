@@ -1,0 +1,4 @@
+venv/
+venv
+requirements.txt
+venv/*
