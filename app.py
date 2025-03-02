@@ -18,6 +18,11 @@ import uuid
 from flask_cors import CORS
 import torch
 
+
+
+
+
+
 # Initialize Flask app
 app = Flask(__name__)
 CORS(app)
@@ -77,7 +82,7 @@ app.config['EXTRACTED_FOLDER'] = EXTRACTED_FOLDER
 
 
 
-GOOGLE_API_KEY = 'API key comes here'
+GOOGLE_API_KEY = 'paste your api key here'
 genai.configure(api_key=GOOGLE_API_KEY)
 
 # Initialize the model with Gemini 1.5 Flash
@@ -285,6 +290,10 @@ def get_saved_images():
         print(f"Error getting saved images: {str(e)}")
         return jsonify({'success': False, 'error': str(e)})
     
+
+
+
+
 
 
 # Add this route to serve images

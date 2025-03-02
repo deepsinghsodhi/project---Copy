@@ -1446,9 +1446,7 @@ document.addEventListener('DOMContentLoaded', disableDownloadButton);
 
         
             // Initialize everything
-            addDownloadButton();
             addCheckboxListeners();
-            updateDownloadButton();
         });
         
         // Make downloadSelectedImages available globally
@@ -1790,18 +1788,7 @@ async function updateSavedImages() {
 }
 
 
-    // Function to update extract button state
-    function updateExtractButton() {
-        const selectedSavedImages = document.querySelectorAll('.saved-image-checkbox:checked');
-        const extractBtn = document.getElementById('extractBtn');
-        extractBtn.disabled = selectedSavedImages.length === 0;
-    }
 
-// Initialize buttons on page load
-document.addEventListener('DOMContentLoaded', () => {
-    updateExtractButton();
-    updateDownloadButton();
-});
 
     // Function to extract data using Gemini API
    
@@ -2442,8 +2429,6 @@ document.querySelectorAll('.image-checkbox').forEach(checkbox => {
     checkbox.addEventListener('change', updateDownloadButton);
 });
 
-// Call this initially to set the correct state
-updateDownloadButton();
 
 // Make sure these styles are added to your CSS
 const styles = `
