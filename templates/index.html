@@ -2462,41 +2462,7 @@ const styles = `
 `;
 
 
-// Add styles to the document
-const styleSheet = document.createElement('style');
-styleSheet.textContent = styles;
-document.head.appendChild(styleSheet);
-
-    async function extractTableData(filename) {
-    try {
-        modal.style.display = 'block';
-        loadingOverlay.style.display = 'flex';
-        extractedDataDiv.innerHTML = '';
-
-        const response = await fetch('/extract_table_data', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ image_path: filename })
-        });
-
-        const data = await response.json();
-        
-        if (data.success) {
-            // Format the JSON data nicely
-            extractedDataDiv.innerHTML = `<pre>${JSON.stringify(data.data, null, 2)}</pre>`;
-        } else {
-            extractedDataDiv.innerHTML = `Error: ${data.error}`;
-        }
-    } catch (error) {
-        extractedDataDiv.innerHTML = 'Error extracting table data';
-    } finally {
-        loadingOverlay.style.display = 'none';
-    }
-}
-
-
+    
 
 async function copyToClipboard(tableData) {
     try {
