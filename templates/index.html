@@ -1648,7 +1648,7 @@ document.addEventListener('DOMContentLoaded', disableDownloadButton);
                 </div>
             `;
         } finally {
-            loadingIndicator.style.display = 'none'; // This line also causes the error if loadingIndicator is null
+            loadingIndicator.style.display = 'none'; 
             extractBtn.disabled = false;
         }
     }
@@ -1661,7 +1661,7 @@ document.addEventListener('DOMContentLoaded', disableDownloadButton);
  
 
 <style>
-    /* Add or update these styles */
+
     .image-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
