@@ -84,7 +84,7 @@ app.config['EXTRACTED_FOLDER'] = EXTRACTED_FOLDER
 
 
 # Replace this with your valid API key
-GOOGLE_API_KEY = 'AIzaSyDjvrPdJcj3rrMHpNrjAQAy24NjV7XHN40' 
+GOOGLE_API_KEY = 'api key comes here' 
 genai.configure(api_key=GOOGLE_API_KEY)
 
 # Initialize the model with Gemini 1.5 Flash
